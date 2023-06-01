@@ -40,7 +40,7 @@ class LoginScreenState extends State<LoginScreen> {
                     const Align(
                       alignment: Alignment.center,
                       child: Text(
-                        'Welcome to your restaurant',
+                        'Welcome to our dining establishment',
                         style: TextStyle(fontSize: 25, color: Colors.black),
                       ),
                     ),
@@ -73,13 +73,7 @@ class LoginScreenState extends State<LoginScreen> {
                     Padding(
                       padding: const EdgeInsets.only(left: 15, right: 15),
                       child: InkWell(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => SignupScreen()),
-                          );
-                        },
+                        onTap: () {},
                         child: Container(
                           height: 50,
                           width: double.infinity,
@@ -109,7 +103,7 @@ class LoginScreenState extends State<LoginScreen> {
                       child: Align(
                         alignment: Alignment.center,
                         child: Text(
-                          'Forgot password?',
+                          'Forgot password',
                           style: TextStyle(
                             color: Colors.pink,
                             fontSize: 22,
@@ -144,36 +138,36 @@ class LoginScreenState extends State<LoginScreen> {
                       const SizedBox(height: 20),
                     ]),
                     Padding(
-                      padding: const EdgeInsets.only(left: 20),
-                      child: Align(
-                        alignment: Alignment.center,
-                        child: InkWell(
-                          onTap: () {},
-                          child: TextButton(
-                            onPressed: () {},
-                            child: Row(
-                              children: [
-                                IconButton(
-                                    onPressed: () {},
-                                    icon: const Icon(
-                                      Icons.call,
-                                      color: Colors.pink,
-                                      size: 23,
-                                    )),
-                                const SizedBox(width: 5),
-                                Text(
-                                  'Login with phone number',
-                                  style: TextStyle(
-                                      fontSize: 22,
-                                      color: Colors.pink,
-                                      fontWeight: FontWeight.bold),
-                                )
-                              ],
+                      padding: const EdgeInsets.only(left: 15, right: 15),
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => SignupScreen()),
+                          );
+                        },
+                        child: Container(
+                          height: 50,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.pink),
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 5, bottom: 5),
+                            child: Center(
+                              child: Text(
+                                'Signup',
+                                style: TextStyle(
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white),
+                              ),
                             ),
                           ),
                         ),
                       ),
-                    )
+                    ),
                   ],
                 ),
               )),
