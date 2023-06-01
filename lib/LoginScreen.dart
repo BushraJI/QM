@@ -1,57 +1,182 @@
 import 'package:flutter/material.dart';
+import 'package:foodpanda_app/SignupScreen.dart';
+import 'custom_widgets/button_design.dart';
+import 'custom_widgets/textform_field.dart';
 
 class LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+      body: Container(
+        decoration: const BoxDecoration(color: Color(123465)),
+        // image: DecorationImage(
+        //     image: AssetImage('images/food_order.jpg'), fit: BoxFit.cover)),
+        child: Stack(
+          alignment: Alignment.topCenter,
           children: [
-            const Text(
-              'Login',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
+            Padding(
+              padding: const EdgeInsets.only(
+                  top: 70, left: 20, right: 20, bottom: 20),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(color: Colors.black, width: 2),
+                  boxShadow: const [
+                    BoxShadow(
+                        blurRadius: 2, spreadRadius: 2, offset: Offset(0, 9)),
+                  ],
+                ),
               ),
             ),
-            const SizedBox(height: 16),
-            const Text(
-              'App Name',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(height: 8),
-            const Text(
-              'Your everyday meal on the way',
-              style: TextStyle(
-                fontSize: 16,
-                color: Colors.grey,
-              ),
-            ),
-            const SizedBox(height: 32),
-            const Text(
-              'Login or create an account',
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(height: 16),
-            ElevatedButton(
-              onPressed: () {
-                // Handle Facebook login action
-              },
-              child: const Text('Continue with Facebook'),
-            ),
-            const SizedBox(height: 8),
-            ElevatedButton(
-              onPressed: () {
-                // Handle email login action
-              },
-              child: const Text('Continue with Email'),
+            SingleChildScrollView(
+              child: Positioned(
+                  child: Padding(
+                padding: const EdgeInsets.only(right: 20, left: 20),
+                child: Column(
+                  children: [
+                    Image.asset('images/panda.png', height: 100, width: 100),
+                    const SizedBox(height: 20),
+                    const Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                        'Welcome to your restaurant',
+                        style: TextStyle(fontSize: 25, color: Colors.black),
+                      ),
+                    ),
+                    const SizedBox(height: 5),
+                    const Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                        'portal from foodpanda',
+                        style: TextStyle(fontSize: 23, color: Colors.black),
+                      ),
+                    ),
+                    const SizedBox(height: 40),
+                    const Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                        'Login to your account',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.blueGrey,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    const SizedBox(height: 50),
+                    CustomTextField('Email'),
+                    const SizedBox(height: 30),
+                    CustomTextField('Password'),
+                    const SizedBox(
+                      height: 30,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 15, right: 15),
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => SignupScreen()),
+                          );
+                        },
+                        child: Container(
+                          height: 50,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.pink),
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 5, bottom: 5),
+                            child: Center(
+                              child: Text(
+                                'Login',
+                                style: TextStyle(
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 35,
+                    ),
+                    InkWell(
+                      onTap: () {},
+                      child: Align(
+                        alignment: Alignment.center,
+                        child: Text(
+                          'Forgot password?',
+                          style: TextStyle(
+                            color: Colors.pink,
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    Row(children: <Widget>[
+                      Expanded(
+                        child: new Container(
+                            margin:
+                                const EdgeInsets.only(left: 10.0, right: 15.0),
+                            child: Divider(
+                              indent: 10,
+                              color: Colors.black,
+                              height: 50,
+                            )),
+                      ),
+                      Text("OR"),
+                      Expanded(
+                        child: new Container(
+                            margin:
+                                const EdgeInsets.only(left: 15.0, right: 10.0),
+                            child: Divider(
+                              endIndent: 10,
+                              color: Colors.black,
+                              height: 50,
+                            )),
+                      ),
+                      const SizedBox(height: 20),
+                    ]),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20),
+                      child: Align(
+                        alignment: Alignment.center,
+                        child: InkWell(
+                          onTap: () {},
+                          child: TextButton(
+                            onPressed: () {},
+                            child: Row(
+                              children: [
+                                IconButton(
+                                    onPressed: () {},
+                                    icon: const Icon(
+                                      Icons.call,
+                                      color: Colors.pink,
+                                      size: 23,
+                                    )),
+                                const SizedBox(width: 5),
+                                Text(
+                                  'Login with phone number',
+                                  style: TextStyle(
+                                      fontSize: 22,
+                                      color: Colors.pink,
+                                      fontWeight: FontWeight.bold),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              )),
             ),
           ],
         ),
@@ -65,10 +190,4 @@ class LoginScreen extends StatefulWidget {
 
   @override
   LoginScreenState createState() => LoginScreenState();
-}
-
-void main() {
-  runApp(const MaterialApp(
-    home: LoginScreen(),
-  ));
 }
