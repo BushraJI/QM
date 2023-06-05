@@ -18,7 +18,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
         decoration: InputDecoration(
             labelText: widget.label_text,
             labelStyle: TextStyle(
-                color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold),
+                color: Colors.pink, fontSize: 14, fontWeight: FontWeight.bold),
             focusedBorder: UnderlineInputBorder(
                 borderSide: BorderSide(color: Colors.pink, width: 2))),
       ),
