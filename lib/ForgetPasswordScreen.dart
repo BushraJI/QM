@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:foodpanda_app/SignupScreen.dart';
 import 'custom_widgets/button_design.dart';
 import 'custom_widgets/textform_field.dart';
 
-class SignupScreenState extends State<SignupScreen> {
+class ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        // decoration: const BoxDecoration(color: Color(123465)),
         decoration:
             const BoxDecoration(image: DecorationImage(image: AssetImage('assets/images/food_order.jpg'), fit: BoxFit.cover)),
+        // image: DecorationImage(
+        //     image: AssetImage('images/food_order.jpg'), fit: BoxFit.cover)),
         child: Stack(
           alignment: Alignment.topCenter,
           children: [
@@ -28,7 +32,7 @@ class SignupScreenState extends State<SignupScreen> {
             SingleChildScrollView(
               child: Positioned(
                   child: Padding(
-                padding: const EdgeInsets.only(top: 70, right: 20, left: 20),
+                padding: const EdgeInsets.only(top:70, right: 20, left: 20),
                 child: Column(
                   children: [
                     Image.asset('assets/images/panda.png', height: 100, width: 100),
@@ -52,23 +56,21 @@ class SignupScreenState extends State<SignupScreen> {
                     const Align(
                       alignment: Alignment.center,
                       child: Text(
-                        'Signup to your account',
-                        style: TextStyle(fontSize: 18, color: Colors.blueGrey, fontWeight: FontWeight.bold),
+                        'Reset to your account',
+                        style: TextStyle(fontSize: 16, color: Colors.blueGrey, fontWeight: FontWeight.bold),
                       ),
                     ),
                     const SizedBox(height: 50),
-                    CustomTextField('Username'),
-                    const SizedBox(height: 50),
                     CustomTextField('Email'),
-                    const SizedBox(height: 50),
-                    CustomTextField('Contact number'),
-                    const SizedBox(height: 30),
-                    CustomTextField('Password'),
-                    const SizedBox(height: 30),
-                    CustomTextField('Confirm Password'),
-                    const SizedBox(height: 30,),
-                    ButtonDesign(buttonText: "Signup", onPressed: (){Navigator.pop(context);}),
-                    const SizedBox(height: 50),
+                    const SizedBox(
+                      height: 40,
+                    ),
+                    ButtonDesign(
+                      buttonText: "Forget Password",
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                    ),
                   ],
                 ),
               )),
@@ -80,9 +82,9 @@ class SignupScreenState extends State<SignupScreen> {
   }
 }
 
-class SignupScreen extends StatefulWidget {
-  const SignupScreen({Key? key}) : super(key: key);
+class ForgetPasswordScreen extends StatefulWidget {
+  const ForgetPasswordScreen({Key? key}) : super(key: key);
 
   @override
-  SignupScreenState createState() => SignupScreenState();
+  ForgetPasswordScreenState createState() => ForgetPasswordScreenState();
 }
