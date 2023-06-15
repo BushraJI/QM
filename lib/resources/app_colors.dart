@@ -6,9 +6,10 @@ class AppColors {
   static const Color lowerTitleColor = Color(0XFF0C343F);
   static const Color blueButtonColor = Color(0XFF9CC1CC);
   static const Color goldButtonColor = Color(0XFFC6A97D);
-  static const Color primary = Color(0xffD70F64);
-  static const Color backgroundColor = Color(0xffeef1f6);
-
+  //static const Color primary = Color(0xffD70F64);
+  static const Color primary = Color(0xFFFFA500);
+  //static const Color backgroundColor = Color(0xffeef1f6);
+  static const Color backgroundColor = Color(0xFFFFA500);
   // Grey colors
   static const Color textFieldInputColor = Color(0XFF35425B);
   static const Color textFieldTitleColor = Color(0XFF72809D);
@@ -23,11 +24,11 @@ class AppColors {
   static const Color grayBackgroundColor = Color(0xFFFAFAFB);
   static const Color dividerBackgroundColor = Color(0x41DDDDDD);
   static const Color disableFillColor = Color(0xFFF7FAFC);
-  static const Color disableBorderColor =   Color(0xFFDCE1E7);
+  static const Color disableBorderColor = Color(0xFFDCE1E7);
   static const Color activeFillColor = Color(0x2683C5BE);
   static const Color activeBorderColor = Color(0xFF9CC1CC);
   static const Color selectedFillColor = Color(0xFFC6A97D);
-  static const Color selectedBorderColor =   Color(0xFFC6A97D);
+  static const Color selectedBorderColor = Color(0xFFC6A97D);
 
   static const Color textTitleColor = Color(0xFF35425B);
   static const Color textDetailColor = Color(0xFF72809D);

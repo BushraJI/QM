@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:foodpanda_app/TestScreen.dart';
+import 'package:foodpanda_app/NavigationDrawerDemo.dart';
 import 'package:foodpanda_app/resources/app_colors.dart';
 
 import 'custom_widgets/food_custom.dart';
@@ -15,21 +16,25 @@ class HomeScreen extends StatelessWidget {
     // );
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
+      drawer: NavigationDrawerDemo(),
       appBar: AppBar(
         centerTitle: false,
         backgroundColor: AppColors.primary,
         leading: Row(
           children: [
             IconButton(
-              icon: const Icon(Icons.list),
-              onPressed: () {},
+              icon: const Icon(Icons.menu),
+              onPressed: () {
+                // Open menu options
+                Scaffold.of(context).openDrawer();
+              },
             ),
           ],
         ),
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: const [
-            Text("Food Panda"),
+            Text("Delivery Address"),
           ],
         ),
         actions: [
@@ -57,9 +62,7 @@ class HomeScreen extends StatelessWidget {
               obscureText: false,
               placeholder: "Search for shops & restaurants",
               prefix: const Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Icon(Icons.search),
-              ),
+                  padding: EdgeInsets.all(8.0), child: Icon(Icons.search)),
               decoration: BoxDecoration(
                 color: AppColors.backgroundColor,
                 borderRadius: BorderRadius.circular(15),
@@ -181,17 +184,20 @@ class HomeScreen extends StatelessWidget {
                                     onTap: () {
                                       Navigator.push(
                                         context,
-                                        MaterialPageRoute(builder: (context) => TestScreen()
+                                        MaterialPageRoute(
+                                            builder: (context) => TestScreen()
                                             // const PandamartScreen(),
                                             ),
                                       );
                                     },
                                     child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: const [
                                         FoodCustom(
                                           text: "pandamart",
-                                          subtext: "Fast delivery, up to 40% off",
+                                          subtext:
+                                              "Fast delivery, up to 40% off",
                                         ),
                                       ],
                                     ),
@@ -217,7 +223,8 @@ class HomeScreen extends StatelessWidget {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => TestScreen()
+                                MaterialPageRoute(
+                                    builder: (context) => TestScreen()
                                     // const PickupScreen(),
                                     ),
                               );
@@ -234,7 +241,8 @@ class HomeScreen extends StatelessWidget {
                                   Padding(
                                     padding: const EdgeInsets.all(15.0),
                                     child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: const [
                                         FoodCustom(
                                           text: "Pick-up",
@@ -384,5 +392,14 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
     );
+    drawer:
+    Drawer(
+        child: ListView(
+      children: [
+        ListTile(
+          title: const Text('Your Orders'),
+        )
+      ],
+    ));
   }
 }
