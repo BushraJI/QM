@@ -14,7 +14,10 @@ class HomeScreen extends StatelessWidget {
     // final DealsController dealsController = Get.put(
     //   DealsController(),
     // );
+    final globalKey = GlobalKey<ScaffoldState>();
+
     return Scaffold(
+      key: globalKey,
       backgroundColor: AppColors.backgroundColor,
       drawer: NavigationDrawerDemo(),
       appBar: AppBar(
@@ -26,7 +29,8 @@ class HomeScreen extends StatelessWidget {
               icon: const Icon(Icons.menu),
               onPressed: () {
                 // Open menu options
-                Scaffold.of(context).openDrawer();
+                globalKey.currentState!.openDrawer(); //<-- SEE HERE
+
               },
             ),
           ],
