@@ -7,9 +7,9 @@ class AppColors {
   static const Color blueButtonColor = Color(0XFF9CC1CC);
   static const Color goldButtonColor = Color(0XFFC6A97D);
   //static const Color primary = Color(0xffD70F64);
-  static const Color primary = Color(0xFFFFA500);
+  static const Color primary = Color.fromARGB(230, 255, 255, 255);
   //static const Color backgroundColor = Color(0xffeef1f6);
-  static const Color backgroundColor = Color(0xFFFFA500);
+  static const Color backgroundColor = Color.fromARGB(230, 255, 255, 255);
   // Grey colors
   static const Color textFieldInputColor = Color(0XFF35425B);
   static const Color textFieldTitleColor = Color(0XFF72809D);
