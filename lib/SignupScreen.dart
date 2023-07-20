@@ -35,24 +35,10 @@ class SignupScreenState extends State<SignupScreen> {
                 padding: const EdgeInsets.only(top: 70, right: 20, left: 20),
                 child: Column(
                   children: [
-                    Image.asset('assets/images/panda.png',
+                    Image.asset('assets/images/QM.png',
                         height: 100, width: 100),
                     const SizedBox(height: 20),
-                    const Align(
-                      alignment: Alignment.center,
-                      child: Text(
-                        'Welcome to your restaurant',
-                        style: TextStyle(fontSize: 25, color: Colors.black),
-                      ),
-                    ),
                     const SizedBox(height: 5),
-                    const Align(
-                      alignment: Alignment.center,
-                      child: Text(
-                        'portal from foodpanda',
-                        style: TextStyle(fontSize: 23, color: Colors.black),
-                      ),
-                    ),
                     const SizedBox(height: 40),
                     const Align(
                       alignment: Alignment.center,
@@ -78,7 +64,7 @@ class SignupScreenState extends State<SignupScreen> {
                       height: 30,
                     ),
                     ButtonDesign(
-                        buttonText: "Signup",
+                        buttonText: "Register",
                         onPressed: () {
                           Navigator.pop(context);
                         }),

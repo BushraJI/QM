@@ -9,22 +9,25 @@ class TestScreenState extends State<TestScreen> {
     return Scaffold(
       body: Container(
         // decoration: const BoxDecoration(color: Color(123465)),
-        decoration:
-            const BoxDecoration(image: DecorationImage(image: AssetImage('assets/images/food_order.jpg'), fit: BoxFit.cover)),
+        decoration: const BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('assets/images/QM.png'), fit: BoxFit.cover)),
         // image: DecorationImage(
-        //     image: AssetImage('images/food_order.jpg'), fit: BoxFit.cover)),
+        //     image: AssetImage('images/QM.png'), fit: BoxFit.cover)),
         child: Stack(
           alignment: Alignment.topCenter,
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 120, left: 20, right: 20, bottom: 20),
+              padding: const EdgeInsets.only(
+                  top: 120, left: 20, right: 20, bottom: 20),
               child: Container(
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(color: Colors.black, width: 2),
                   boxShadow: const [
-                    BoxShadow(blurRadius: 2, spreadRadius: 2, offset: Offset(0, 9)),
+                    BoxShadow(
+                        blurRadius: 2, spreadRadius: 2, offset: Offset(0, 9)),
                   ],
                 ),
               ),
@@ -32,10 +35,11 @@ class TestScreenState extends State<TestScreen> {
             SingleChildScrollView(
               child: Positioned(
                   child: Padding(
-                padding: const EdgeInsets.only(top:70, right: 20, left: 20),
+                padding: const EdgeInsets.only(top: 70, right: 20, left: 20),
                 child: Column(
                   children: [
-                    Image.asset('assets/images/panda.png', height: 100, width: 100),
+                    Image.asset('assets/images/QM.png',
+                        height: 100, width: 100),
                     const SizedBox(height: 120),
                     const Align(
                       alignment: Alignment.center,

@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:foodpanda_app/AboutUs.dart';
+import 'package:foodpanda_app/ContactUs.dart';
+
+import 'Companies.dart';
+import 'Jobs.dart';
+import 'Myprofile.dart';
 
 class NavigationDrawerDemo extends StatefulWidget {
   NavigationDrawerDemo() : super();
@@ -21,7 +27,7 @@ class _NavigationDrawerDemoState extends State<NavigationDrawerDemo> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Image.asset(
-                  'assets/images/panda.png',
+                  'assets/images/QM.png',
                   width: 100,
                   height: 100,
                 ),
@@ -31,8 +37,11 @@ class _NavigationDrawerDemoState extends State<NavigationDrawerDemo> {
                 Padding(
                   padding: const EdgeInsets.only(left: 12.0),
                   child: Text(
-                    "Food Panda",
-                    style: TextStyle(fontWeight:FontWeight.w700, fontSize: 22, color: Colors.black87),
+                    "QM Connects",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 22,
+                        color: Colors.black87),
                   ),
                 )
               ],
@@ -42,29 +51,65 @@ class _NavigationDrawerDemoState extends State<NavigationDrawerDemo> {
             ),
           ),
           ListTile(
+            leading: Icon(Icons.home),
+            title: Text('Home'),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+          ListTile(
             leading: Icon(Icons.person),
-            title: Text('Profile'),
+            title: Text('My Profile'),
             onTap: () {
-              Navigator.pop(context);
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.add_alarm),
-            title: Text('Contact Us'),
-            onTap: () {
-              Navigator.pop(context);
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.settings),
-            title: Text('Settings'),
-            onTap: () {
-              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Myprofile()),
+              );
             },
           ),
           ListTile(
             leading: Icon(Icons.help),
+            title: Text('Jobs'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => jobs()),
+              );
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.compare_outlined),
+            title: Text('Companies'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Companies()),
+              );
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.help_center),
             title: Text('About Us'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => AboutUsScreen()),
+              );
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.contact_page),
+            title: Text('Contact Us'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ContactUsScreen()),
+              );
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.logout_rounded),
+            title: Text('Logout'),
             onTap: () {
               Navigator.pop(context);
             },

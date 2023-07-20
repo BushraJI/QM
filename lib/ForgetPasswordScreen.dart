@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:foodpanda_app/SignupScreen.dart';
 import 'custom_widgets/button_design.dart';
 import 'custom_widgets/textform_field.dart';
-import 'custom_widgets/flutter_icons.dart';
 
 class ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
   @override
@@ -11,8 +10,7 @@ class ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
       body: Container(
         decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/food_order.jpg'),
-                fit: BoxFit.cover)),
+                image: AssetImage('assets/images/QM.png'), fit: BoxFit.cover)),
         child: Stack(
           alignment: Alignment.topCenter,
           children: [
@@ -37,29 +35,14 @@ class ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                   padding: const EdgeInsets.only(top: 70, right: 20, left: 20),
                   child: Column(
                     children: [
-                      Image.asset('assets/images/panda.png',
+                      Image.asset('assets/images/QM.png',
                           height: 100, width: 100),
                       const SizedBox(height: 20),
-                      const Align(
-                        alignment: Alignment.center,
-                        child: Text(
-                          'Welcome to your restaurant',
-                          style: TextStyle(fontSize: 25, color: Colors.black),
-                        ),
-                      ),
-                      const SizedBox(height: 5),
-                      const Align(
-                        alignment: Alignment.center,
-                        child: Text(
-                          'portal from foodpanda',
-                          style: TextStyle(fontSize: 23, color: Colors.black),
-                        ),
-                      ),
                       const SizedBox(height: 40),
                       const Align(
                         alignment: Alignment.center,
                         child: Text(
-                          'Reset to your account',
+                          'Reset Your Password',
                           style: TextStyle(
                               fontSize: 16,
                               color: Colors.blueGrey,
@@ -79,7 +62,7 @@ class ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                       ),
                       const SizedBox(height: 40),
                       ButtonDesign(
-                        buttonText: "Forget Password",
+                        buttonText: "Send Password Reset link",
                         onPressed: () {
                           Navigator.pop(context);
                         },

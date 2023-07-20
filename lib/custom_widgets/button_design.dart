@@ -19,13 +19,17 @@ class ButtonDesign extends StatelessWidget {
         child: Container(
           height: 50,
           width: double.infinity,
-          decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: Colors.pink),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10), color: Colors.blue),
           child: Padding(
             padding: const EdgeInsets.only(top: 5, bottom: 5),
             child: Center(
               child: Text(
                 buttonText!,
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),
+                style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
               ),
             ),
           ),
