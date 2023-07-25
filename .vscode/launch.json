@@ -5,30 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Dart",
-            "type": "dart",
-            "request": "launch",
-            "program": "bin/main.dart"
-        },
-        {
-            "name": "Dart",
-            "type": "dart",
-            "request": "launch",
-            "program": "bin/main.dart"
-        },
-        {
-            "name": "foodpanda_app",
+            "name": "QM App",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "foodpanda_app (profile mode)",
+            "name": "QM App (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
-            "name": "foodpanda_app (release mode)",
+            "name": "QM App (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"

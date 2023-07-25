@@ -37,10 +37,14 @@ dependencies:
   form_field_validator: ^1.1.0
   flutter_native_splash: any
   pin_code_fields: ^7.3.0
+  sizer: ^2.0.15
+  flutter_spinkit: ^5.2.0
+  fluttertoast: ^8.0.8
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

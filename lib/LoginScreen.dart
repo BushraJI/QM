@@ -5,6 +5,7 @@ import 'package:sizer/sizer.dart';
 import 'ForgetPasswordScreen.dart';
 import 'custom_widgets/button_design.dart';
 import 'custom_widgets/textform_field.dart';
+import 'package:foodpanda_app/extension_methods.dart';
 
 class LoginScreenState extends State<LoginScreen> {
   @override

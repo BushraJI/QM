@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 class CustomTextField extends StatefulWidget {
   String label_text;
-
   CustomTextField(this.label_text);
+
+  // CustomTextField(this.label_text, {required TextEditingController controller});
 
   @override
   _CustomTextFieldState createState() => _CustomTextFieldState();
@@ -18,9 +19,10 @@ class _CustomTextFieldState extends State<CustomTextField> {
         decoration: InputDecoration(
             labelText: widget.label_text,
             labelStyle: TextStyle(
-                color: Colors.pink, fontSize: 14, fontWeight: FontWeight.bold),
+                color: Colors.blue, fontSize: 14, fontWeight: FontWeight.bold),
             focusedBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: Colors.pink, width: 2))),
+                borderSide: BorderSide(
+                    color: Color.fromARGB(255, 32, 14, 192), width: 2))),
       ),
     );
   }
