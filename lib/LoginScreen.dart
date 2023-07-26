@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:foodpanda_app/HomeScreen.dart';
 import 'package:foodpanda_app/SignupScreen.dart';
 import 'package:sizer/sizer.dart';
+import 'CircularIndicator.dart';
 import 'ForgetPasswordScreen.dart';
 import 'custom_widgets/button_design.dart';
 import 'custom_widgets/textform_field.dart';
@@ -68,15 +69,29 @@ class LoginScreenState extends State<LoginScreen> {
                               height: 30,
                             ),
                             ButtonDesign(
-                              buttonText: "Login",
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => HomeScreen()),
-                                );
-                              },
-                            ),
+                                buttonText: "Login",
+                                onPressed: () {
+                                  showDialog(
+                                    context: context,
+                                    barrierDismissible: false,
+                                    builder: (BuildContext context) {
+                                      return CircularIndicator(); // Show the circular indicator as a dialog
+                                    },
+                                  );
+
+                                  // Simulate an async operation (e.g., login request)
+                                  Future.delayed(
+                                    Duration(seconds: 2),
+                                    () {
+                                      Navigator.pop(context);
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => HomeScreen()),
+                                      );
+                                    },
+                                  );
+                                }),
                             const SizedBox(
                               height: 35,
                             ),

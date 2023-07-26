@@ -4,10 +4,12 @@ import 'package:foodpanda_app/TestScreen.dart';
 import 'package:foodpanda_app/NavigationDrawerDemo.dart';
 import 'package:foodpanda_app/resources/app_colors.dart';
 
+//import 'CircularIndicator.dart';
 import 'custom_widgets/food_custom.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  bool isLoading = true;
+  //const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -79,6 +81,7 @@ class HomeScreen extends StatelessWidget {
               padding: const EdgeInsets.all(12.0),
               child: Column(
                 children: [
+                  //CircularIndicator(),
                   Container(
                     width: MediaQuery.of(context).size.width,
                     height: 160,
